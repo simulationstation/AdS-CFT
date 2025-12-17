@@ -14,7 +14,7 @@ def figure(*args, **kwargs):  # noqa: ANN002, ANN003 - mimic matplotlib signatur
     return _current_plot
 
 
-def plot(x, y, **kwargs):  # noqa: ANN002, ANN003
+def plot(x, y, fmt=None, **kwargs):  # noqa: ANN002, ANN003
     paired = list(zip(x, y))
     _current_plot.setdefault("data", []).append(paired)
 
